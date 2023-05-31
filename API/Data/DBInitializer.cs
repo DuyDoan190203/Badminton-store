@@ -12,198 +12,198 @@ namespace API.Data
             {
                 new Product
                 {
-                    Name = "Angular Speedster Board 2000",
+                    Name = "Astrox 100zz",
                     Description =
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 20000,
-                    PictureUrl = "/images/products/sb-ang1.png",
-                    Brand = "Angular",
-                    Type = "Boards",
+                    Price = 246,
+                    PictureUrl = "/Images/products/ax100z-ynex2.png",
+                    Brand = "Yonex",
+                    Type = "Badminton racket",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Green Angular Board 3000",
+                    Name = "Jet-speed 10",
                     Description = "Nunc viverra imperdiet enim. Fusce est. Vivamus a tellus.",
-                    Price = 15000,
-                    PictureUrl = "/images/products/sb-ang2.png",
-                    Brand = "Angular",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Price = 160,
+                    PictureUrl = "/Images/products/Jspeed10-victor1.png",
+                    Brand = "Victor",
+                    Type = "Badminton racket",
+                    QuantityInStock = 90
                 },
                 new Product
                 {
-                    Name = "Core Board Speed Rush 3",
+                    Name = "Lining 9000c (COMBAT)",
                     Description =
                         "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 18000,
-                    PictureUrl = "/images/products/sb-core1.png",
-                    Brand = "NetCore",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Price = 280,
+                    PictureUrl = "/Images/products/Li9000C-lining1.png",
+                    Brand = "Lining",
+                    Type = "Badminton racket",
+                    QuantityInStock = 50
                 },
                 new Product
                 {
-                    Name = "Net Core Super Board",
+                    Name = "Thurster F",
                     Description =
                         "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-                    Price = 30000,
-                    PictureUrl = "/images/products/sb-core2.png",
-                    Brand = "NetCore",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Price = 189,
+                    PictureUrl = "/Images/products/Thrusterf-victor2.png",
+                    Brand = "Victor",
+                    Type = "Badminton racket",
+                    QuantityInStock = 39
                 },
                 new Product
                 {
-                    Name = "React Board Super Whizzy Fast",
+                    Name = "Axtrox 88d pro",
+                    Description =
+                        "Yonex ASTROX 88D Pro racket is also built using with Rotational Generator System.The counter balanced head adapts to each shot, helping you to control the drive and attack the opposition with increased acceleration, steeper angle and power on the smash. ",
+                    Price = 199,
+                    PictureUrl = "/Images/products/ax88d-ynex1.png",
+                    Brand = "Yonex",
+                    Type = "Badminton racket",
+                    QuantityInStock = 30
+                },
+                new Product
+                {
+                    Name = "TJ Power (Goh V Shem)",
                     Description =
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 25000,
-                    PictureUrl = "/images/products/sb-react1.png",
-                    Brand = "React",
-                    Type = "Boards",
-                    QuantityInStock = 100
+                    Price = 140,
+                    PictureUrl = "/Images/products/TJPower-Felet1.png",
+                    Brand = "Felet",
+                    Type = "Badminton racket",
+                    QuantityInStock = 99
                 },
                 new Product
                 {
-                    Name = "Typescript Entry Board",
-                    Description =
-                        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 12000,
-                    PictureUrl = "/images/products/sb-ts1.png",
-                    Brand = "TypeScript",
-                    Type = "Boards",
-                    QuantityInStock = 100
-                },
-                new Product
-                {
-                    Name = "Core Blue Hat",
+                    Name = "Yonex 65z",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1000,
-                    PictureUrl = "/images/products/hat-core1.png",
-                    Brand = "NetCore",
-                    Type = "Hats",
-                    QuantityInStock = 100
+                    Price = 120,
+                    PictureUrl = "/Images/products/shoes-yonex1.png",
+                    Brand = "Yonex",
+                    Type = "Shoes",
+                    QuantityInStock = 20
                 },
                 new Product
                 {
-                    Name = "Green React Woolen Hat",
+                    Name = "Yonex Eclipson Z",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 8000,
-                    PictureUrl = "/images/products/hat-react1.png",
-                    Brand = "React",
-                    Type = "Hats",
+                    Price = 149,
+                    PictureUrl = "/images/products/shoes-yonex2.png",
+                    Brand = "Yonex",
+                    Type = "Shoes",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Purple React Woolen Hat",
+                    Name = "Mizuno Wave Clang",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1500,
-                    PictureUrl = "/images/products/hat-react2.png",
-                    Brand = "React",
-                    Type = "Hats",
+                    Price = 150,
+                    PictureUrl = "/Images/products/Shoes-mizuno1.png",
+                    Brand = "Mizuno",
+                    Type = "Shoes",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Blue Code Gloves",
+                    Name = "Victor 86",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1800,
-                    PictureUrl = "/images/products/glove-code1.png",
-                    Brand = "VS Code",
-                    Type = "Gloves",
+                    Price = 110,
+                    PictureUrl = "/Images/products/shoes-victor1.png",
+                    Brand = "Victor",
+                    Type = "Shoes",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Green Code Gloves",
+                    Name = "Victor 86H",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1500,
-                    PictureUrl = "/images/products/glove-code2.png",
-                    Brand = "VS Code",
-                    Type = "Gloves",
-                    QuantityInStock = 100
+                    Price = 150,
+                    PictureUrl = "/Images/products/shoes-victor2.png",
+                    Brand = "Victor",
+                    Type = "Shoes",
+                    QuantityInStock = 12
                 },
                 new Product
                 {
-                    Name = "Purple React Gloves",
+                    Name = "Yonex DD1",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1600,
-                    PictureUrl = "/images/products/glove-react1.png",
-                    Brand = "React",
-                    Type = "Gloves",
+                    Price = 19,
+                    PictureUrl = "/Images/products/Shirt-Yonex1.png",
+                    Brand = "Yonex",
+                    Type = "Shirt",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Green React Gloves",
+                    Name = "Yonex KH1004",
                     Description =
                         "Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 1400,
-                    PictureUrl = "/images/products/glove-react2.png",
-                    Brand = "React",
-                    Type = "Gloves",
+                    Price = 14,
+                    PictureUrl = "/Images/products/Shirt-Yonex2.png",
+                    Brand = "Yonex",
+                    Type = "Shirt",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Redis Red Boots",
+                    Name = "Victor KH",
                     Description =
                         "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 25000,
-                    PictureUrl = "/images/products/boot-redis1.png",
-                    Brand = "Redis",
-                    Type = "Boots",
+                    Price = 25,
+                    PictureUrl = "/Images/products/Shirt-victor1.png",
+                    Brand = "Victor",
+                    Type = "Shirt",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Core Red Boots",
+                    Name = "Lining DD99",
                     Description =
                         "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies, purus lectus malesuada libero, sit amet commodo magna eros quis urna.",
-                    Price = 18999,
-                    PictureUrl = "/images/products/boot-core2.png",
-                    Brand = "NetCore",
-                    Type = "Boots",
+                    Price = 29,
+                    PictureUrl = "/Images/products/shirt-lining1.png",
+                    Brand = "Lining",
+                    Type = "Shirt",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Core Purple Boots",
+                    Name = "Shuttle Lining 1.pro",
                     Description =
                         "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin pharetra nonummy pede. Mauris et orci.",
-                    Price = 19999,
-                    PictureUrl = "/images/products/boot-core1.png",
-                    Brand = "NetCore",
-                    Type = "Boots",
+                    Price = 22,
+                    PictureUrl = "/Images/products/Shuttle-lining1.png",
+                    Brand = "Lining",
+                    Type = "Shuttles",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Angular Purple Boots",
+                    Name = "Shuttles Victor pro",
                     Description = "Aenean nec lorem. In porttitor. Donec laoreet nonummy augue.",
-                    Price = 15000,
-                    PictureUrl = "/images/products/boot-ang2.png",
-                    Brand = "Angular",
-                    Type = "Boots",
+                    Price = 20,
+                    PictureUrl = "/Images/products/Shuttles-Victor1.png",
+                    Brand = "Victor",
+                    Type = "Shuttles",
                     QuantityInStock = 100
                 },
                 new Product
                 {
-                    Name = "Angular Blue Boots",
+                    Name = "Shuttles Yonex ADCz 10",
                     Description =
                         "Suspendisse dui purus, scelerisque at, vulputate vitae, pretium mattis, nunc. Mauris eget neque at sem venenatis eleifend. Ut nonummy.",
-                    Price = 18000,
-                    PictureUrl = "/images/products/boot-ang1.png",
-                    Brand = "Angular",
-                    Type = "Boots",
+                    Price = 35,
+                    PictureUrl = "/Images/products/Shuttles-Yonex1.png",
+                    Brand = "Yonex",
+                    Type = "Shuttles",
                     QuantityInStock = 100
                 },
             };
