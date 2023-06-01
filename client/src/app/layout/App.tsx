@@ -1,7 +1,7 @@
-import Catalog from "../../features/catalog/Catalog";
 import { Container, CssBaseline, ThemeProvider, createTheme} from "@mui/material";
-import ResponsiveAppBar from "./Header";
 import { useState } from "react";
+import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
 function App() {
   const[darkMode, setDarkMode] = useState(false);
@@ -23,9 +23,9 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline/>
-      <ResponsiveAppBar darkMode={darkMode} handleThemeChange={handleThemeChange}/>
+      <Header darkMode={darkMode} handleThemeChange={handleThemeChange}/>
       <Container>
-      <Catalog/> 
+        <Outlet /> 
       </Container>
     </ThemeProvider>
   );
