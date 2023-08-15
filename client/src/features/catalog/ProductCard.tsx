@@ -17,25 +17,20 @@ export default function ProductCard({product}: Props){
   return(
     <Card>
       <CardHeader
-        avatar={
-          <Avatar sx={{bgcolor: 'common.white'}}>
-            {product.name.charAt(0).toUpperCase()}
-          </Avatar>
-        }
         title ={product.name}
         titleTypographyProps={{
-          sx: {fontWeight: 'bold', color: 'common.black'}
+          sx: {fontSize: 18, fontWeight: '500', color: 'common.black', p: 3}
         }}
 
       />
       <CardMedia
-        sx={{ height: 160, width: 350, backgroundSize: 'contain', bgcolor: 'common.white' }}
-        image={product.pictureUrl}
+        sx={{ height: 150, width: 300, backgroundSize: 'contain', bgcolor: 'common.white' }}
+        image={product.pictureUrl} 
         title={product.name}
       />
 
       <CardContent>
-        <Typography gutterBottom color='secondary' variant="h5" >
+        <Typography gutterBottom color='common.black' variant="h5" >
           {currencyFormat(product.price)}
         </Typography>
         <Typography variant="body2" color="text.secondary">

@@ -9,3 +9,12 @@ export interface Product{
   quantityInStock?: number
 }
 // Creating the Typescript interface to warn us about the OBJECT TYPE!
+
+export interface ProductParams{
+  orderBy: string;
+  searchTerm?: string;
+  types: string [];
+  brands: string[];
+  pageNumber: number;
+  pageSize: number;
+}
