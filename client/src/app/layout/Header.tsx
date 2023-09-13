@@ -42,7 +42,7 @@ export default function Header({darkMode, handleThemeChange}: Props){
         <Typography variant="h6" component={NavLink} 
         to ='/'
         sx={navStyles}>
-          SmashIt 
+          Your Badminton 
         </Typography>
         <Switch checked={darkMode} onChange={handleThemeChange}/>
 
