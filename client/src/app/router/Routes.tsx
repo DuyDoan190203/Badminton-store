@@ -1,6 +1,5 @@
 import { Navigate, createBrowserRouter } from "react-router-dom";
 import App from "../layout/App";
-import HomePage from "../../features/home/HomePage";
 import Catalog from "../../features/catalog/Catalog";
 import ProductsDetails from "../../features/catalog/ProductDetails";
 import ContactPage from "../../features/contact/ContactPage";
@@ -21,7 +20,6 @@ export const router = createBrowserRouter([
       {element: <RequireAuth />, children: [
         {path: 'checkout', element: <CheckoutPage/>},
       ]},
-      {path: '', element: <HomePage/>},
       {path: 'catalog', element: <Catalog/>},
       {path: 'catalog/:id', element: <ProductsDetails/>},
       {path: 'about', element: <AboutPage/>},
