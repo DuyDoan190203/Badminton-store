@@ -1,56 +1,50 @@
-import { Alert, AlertTitle, Button, ButtonGroup, Container, List, ListItem, ListItemText, Typography } from "@mui/material";
-import agent from "../../app/api/agent";
-import { useState } from "react";
+import { Container, Typography, Box } from "@mui/material";
 
-export default function AboutPage(){
-  const [validationErrors, setValidationErrors] = useState<string[]>([]);
+const pageStyles = {
+  backgroundColor: "#f7f7f7",
+  minHeight: "100vh",
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
+  padding: "20px",
+};
 
-  function getValidationError() {
-    agent.TestErrors.getValidationError()
-      .then(() => console.log('should not see this'))
-      .catch(error => setValidationErrors(error));
-  }
-  return(
-    <Container>
-      <Typography gutterBottom variant="h2">Erros for testing purposes</Typography>
-      <ButtonGroup fullWidth>
-        <Button variant='contained' 
-        onClick={() => agent.TestErrors.get400Error().catch(error => console.log(error))}>
-          Test 400 error
-          </Button>
+const titleStyles = {
+  fontSize: "2.5rem",
+  fontWeight: "bold",
+  marginBottom: "20px",
+  color: "#333",
+};
 
-        <Button variant='contained'
-        onClick={() => agent.TestErrors.get401Error().catch(error => console.log(error))}>
-          Test 401 error
-          </Button>
+const contentStyles = {
+  fontSize: "1.2rem",
+  lineHeight: "1.5",
+  marginBottom: "20px",
+  color: "#555",
+  textAlign: "center",
+};
 
-        <Button variant='contained' 
-        onClick={() => agent.TestErrors.get404Error().catch(error => console.log(error))}>
-          Test 404 error
-          </Button>
-
-        <Button variant='contained' 
-        onClick={() => agent.TestErrors.get500Error().catch(error => console.log(error))}>
-          Test 500 error
-          </Button>
-
-        <Button variant='contained' 
-        onClick={getValidationError}>
-          Test Validation Error
-          </Button>
-
-      </ButtonGroup>
-      {validationErrors.length > 0 &&
-        <Alert severity='error'>
-          <AlertTitle>Validation Errors</AlertTitle>
-          <List>
-            {validationErrors.map(error => (
-              <ListItem key={error}>
-                <ListItemText>{error}</ListItemText>
-              </ListItem>
-            ))}
-          </List>
-        </Alert>}
+export default function AboutPage() {
+  return (
+    <Container sx={{ mt: 4 }}>
+      <Box sx={pageStyles}>
+        <Typography variant="h2" sx={titleStyles} gutterBottom>
+          About Our Badminton Store
+        </Typography>
+        <Typography variant="body1" sx={contentStyles} paragraph>
+          Welcome to Our Badminton Store, your premier destination for all things badminton. Our mission is to provide the highest quality badminton equipment and gear for players of all levels.
+        </Typography>
+        <Typography variant="body1" sx={contentStyles} paragraph>
+          At Our Badminton Store, we believe in the power of this exhilarating sport to bring joy, fitness, and camaraderie to people's lives. That's why we are committed to offering a curated selection of rackets, shuttlecocks, apparel, and accessories to help you reach your full potential on the court.
+        </Typography>
+        <Typography variant="body1" sx={contentStyles} paragraph>
+          Whether you're a seasoned pro or just getting started with badminton, we're here to support your journey. Our team of experts is passionate about the sport and is dedicated to helping you find the perfect equipment to match your style and level of play.
+        </Typography>
+        <Typography variant="body1" sx={contentStyles} paragraph>
+          Thank you for choosing Our Badminton Store. We look forward to being a part of your badminton experience and helping you achieve your goals in this exciting sport.
+        </Typography>
+      </Box>
     </Container>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Typography, Button, CardActions, CardHeader, Avatar } from "@mui/material";
+import { Card, CardContent, CardMedia, Typography, Button, CardActions, CardHeader } from "@mui/material";
 import { Product } from "../../app/models/product";
 import { Link } from "react-router-dom";
 import { LoadingButton } from "@mui/lab";
@@ -19,7 +19,7 @@ export default function ProductCard({product}: Props){
       <CardHeader
         title ={product.name}
         titleTypographyProps={{
-          sx: {fontSize: 18, fontWeight: '500', color: 'common.black', p: 3}
+          sx: {fontSize: 18, fontWeight: '500', color: 'purple', p: 3}
         }}
 
       />
@@ -30,10 +30,10 @@ export default function ProductCard({product}: Props){
       />
 
       <CardContent>
-        <Typography gutterBottom color='common.black' variant="h5" >
+        <Typography gutterBottom color='purple' variant="h5" >
           {currencyFormat(product.price)}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography variant="body2" color="purple">
           {product.brand} / {product.type}
         </Typography>
       </CardContent>

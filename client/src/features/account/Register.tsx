@@ -9,46 +9,43 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { Link, useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { LoadingButton } from '@mui/lab';
-import agent from '../../app/api/agent';
 import { toast } from 'react-toastify';
+import agent from '../../app/api/agent';
+import { Copyright } from '@mui/icons-material';
 
-function Copyright(props: any) {
-  return (
-    <Typography variant="body2" color="text.secondary" align="center" {...props}>
-      {'Copyright © '}
-      <Link color="inherit" to="https://mui.com/">
-        SmashIt
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
-
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: '#ffffff', // White
+    },
+    background: {
+      default: '#f4f4f4', // Off-White/Gray
+    },
+  },
+});
 
 export default function Register() {
   const navigate = useNavigate();
-  const {register, handleSubmit, setError, formState: {isSubmitting, errors, isValid}} = useForm({
-    mode:'all'
+  const { register, handleSubmit, setError, formState: { isSubmitting, errors, isValid } } = useForm({
+    mode: 'all'
   });
 
   function handleApiErrors(errors: any) {
-    if(errors) {
-      errors.forEach((error: string) => {
-        if(error.includes('Password')) {
-          setError('password', {message: error})
-        } else if(error.includes('Email')){
-          setError('email', {message: error})
-        } else if(error.includes('Username')) {
-          setError('username', {message: error})
+    if (errors) {
+      errors.forEach((error: any) => {
+        if (error.includes('Password')) {
+          setError('password', { message: error })
+        } else if (error.includes('Email')) {
+          setError('email', { message: error })
+        } else if (error.includes('Username')) {
+          setError('username', { message: error })
         }
       });
     }
   }
+
   return (
-    <ThemeProvider theme={defaultTheme}>
+    <ThemeProvider theme={theme}>
       <Grid container component="main" sx={{ height: '100vh' }}>
         <Grid
           item
@@ -56,14 +53,18 @@ export default function Register() {
           sm={4}
           md={7}
           sx={{
-            backgroundImage: 'url(https://source.unsplash.com/random?wallpapers)',
-            backgroundRepeat: 'no-repeat',
-            backgroundColor: (t) =>
-              t.palette.mode === 'light' ? t.palette.grey[50] : t.palette.grey[900],
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundColor: '#ffffff', // White
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
           }}
-        />
+        >
+          <img
+            src="https://source.unsplash.com/random?badminton" // Replace with your badminton image URL
+            alt="Badminton"
+            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          />
+        </Grid>
         <Grid item xs={12} sm={8} md={5} component={Paper} elevation={6} square>
           <Box
             sx={{
@@ -74,29 +75,30 @@ export default function Register() {
               alignItems: 'center',
             }}
           >
-            <Avatar sx={{ m: 1, bgcolor: 'secondary.main' }}>
+            <Avatar sx={{ m: 1, bgcolor: '#ffffff', color: 'black' }}>
               <LockOutlinedIcon />
             </Avatar>
-            <Typography component="h1" variant="h5">
+            <Typography component="h1" variant="h5" color="textPrimary">
               Register
             </Typography>
-            <Box 
-              component="form" 
+            <Box
+              component="form"
               onSubmit={handleSubmit((data) => agent.Account.register(data)
-              .then(() => {
-                toast.success('Registration successful - you can login');
-                navigate('/login')
-              })
-              .catch(error => handleApiErrors(error)))}
-              noValidate  
-              sx={{ mt: 1 }}>
+                .then(() => {
+                  toast.success('Registration successful - you can login');
+                  navigate('/login')
+                })
+                .catch(error => handleApiErrors(error)))}
+              noValidate
+              sx={{ mt: 3 }}
+            >
               <TextField
                 margin="normal"
                 required
                 fullWidth
                 label="Username"
                 autoFocus
-                {...register('username', {required: 'Username is required!'})}
+                {...register('username', { required: 'Username is required!' })}
                 error={!!errors.username}
                 helperText={errors?.username?.message as string}
               />
@@ -108,7 +110,7 @@ export default function Register() {
                 {...register('email', {
                   required: 'Email is required!',
                   pattern: {
-                    value: /^\w+[\w-\.]*@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/,
+                    value: /^\w+[\w-.]*@\w+((-\w+)|(\w*))\.[a-z]{2,3}$/,
                     message: 'Not a valid email address'
                   }
                 })}
@@ -124,8 +126,8 @@ export default function Register() {
                 {...register('password', {
                   required: 'Password is required!',
                   pattern: {
-                    value: /(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&amp;*()_+}{&quot;:;'?/&gt;.&lt;,])(?!.*\s).*$/,
-                    message: 'password is too WEAK and not complex!'
+                    value: /(?=^.{6,10}$)(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+}{":;'?/>.<,])(?!.*\s).*$/,
+                    message: 'Password is too weak and not complex!'
                   }
                 })}
                 error={!!errors.password}
@@ -143,7 +145,7 @@ export default function Register() {
               </LoadingButton>
               <Grid container>
                 <Grid item>
-                  <Link to='/register'>
+                  <Link to='/login' color="textPrimary">
                     {"Already have an account? Sign In"}
                   </Link>
                 </Grid>
@@ -156,5 +158,6 @@ export default function Register() {
     </ThemeProvider>
   );
 }
+
 
 

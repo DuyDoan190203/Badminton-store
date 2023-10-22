@@ -1,8 +1,7 @@
-import { AnyAction, Dispatch, createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice, isAnyOf } from "@reduxjs/toolkit";
 import { Basket } from "../../app/models/basket";
 import agent from "../../app/api/agent";
 import { getCookie } from "../../app/util/util";
-import { AsyncThunkFulfilledActionCreator } from "@reduxjs/toolkit/dist/createAsyncThunk";
 
 interface BasketState{
   basket: Basket | null
