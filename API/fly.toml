@@ -1,9 +1,9 @@
-# fly.toml app configuration file generated for yourbadminton1902 on 2023-09-14T13:17:58+03:00
+# fly.toml app configuration file generated for racketsrain1902 on 2023-10-22T22:08:38+03:00
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "yourbadminton1902"
+app = "racketsrain1902"
 primary_region = "ams"
 
 [build]
@@ -11,7 +11,7 @@ primary_region = "ams"
 
 [env]
   ASPNETCORE_URLS="http://+:8080"
-  
+
 [http_service]
   internal_port = 8080
   force_https = true
