@@ -15,7 +15,7 @@ Enter your shipping information, choose your payment method, and confirm your or
 Login and Access your account 
 View your order history by clicking to the cart
 
-## Due to the cost of deploying the app to the website. it only hosts on Docker. Below are the images about the app hosting locally.
+## Due to the cost of deploying the app only. it only hosts on Docker. Below are the images about the app hosting locally.
 
 Link to the work hours: https://drive.google.com/file/d/1qat1MywvBcJ489Baj7bqLOrFoa9CDde9/view?usp=sharing
 
